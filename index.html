@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelos do site · FloresESer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{background:var(--green-100)}
+  .pick{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:960px;margin:0 auto}
+  .pick a{display:flex;flex-direction:column;text-decoration:none;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s}
+  .pick a:hover{transform:translateY(-5px)}
+  .pick img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .pick .body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+  .pick .tag{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-weight:600}
+  .pick h2{font-size:1.6rem;margin:4px 0 8px}
+  .pick p{color:var(--muted);font-size:.95rem;margin-bottom:.8rem}
+  .pick ul{margin:0 0 18px;padding-left:18px;color:var(--muted);font-size:.9rem}
+  .pick .go{margin-top:auto;font-weight:600;color:var(--terra)}
+  .meter{display:flex;gap:14px;font-size:.82rem;color:var(--muted);margin-bottom:12px}
+  .meter b{color:var(--green-700)}
+  .logo{color:var(--green-900);justify-content:center;font-size:2.2rem;margin-bottom:.5rem}
+  @media (max-width:900px){.pick{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+</style>
+</head>
+<body>
+<main class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="logo"><span class="logo-mark">❀</span><span>Flores<em>E</em>Ser</span></div>
+      <h1 style="font-size:clamp(1.9rem,3.6vw,2.6rem)">Escolha o estilo do site</h1>
+      <p>Quatro propostas com o mesmo conteúdo e o mesmo formulário de orçamento, mas com formas diferentes de o mostrar. As fotografias são apenas exemplos.</p>
+    </div>
+    <div class="pick">
+      <a href="modelo-1-completo.html">
+        <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?w=900&q=70" alt="">
+        <div class="body">
+          <span class="tag">Modelo 1</span><h2>Completo</h2>
+          <div class="meter"><span>Texto <b>●●●</b></span><span>Imagens <b>●●○</b></span></div>
+          <p>Explica bem cada serviço e passa confiança.</p>
+          <ul><li>Fotografias a passar no topo</li><li>Cada serviço com foto e explicação</li><li>Sobre nós, galeria e como funciona</li></ul>
+          <span class="go">Ver modelo →</span>
+        </div>
+      </a>
+      <a href="modelo-2-visual.html">
+        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=900&q=70" alt="">
+        <div class="body">
+          <span class="tag">Modelo 2</span><h2>Visual</h2>
+          <div class="meter"><span>Texto <b>●○○</b></span><span>Imagens <b>●●●</b></span></div>
+          <p>Entra pelos olhos: os trabalhos falam por si.</p>
+          <ul><li>Fotografia em ecrã inteiro</li><li>Comparação antes e depois</li><li>Galeria grande de trabalhos</li></ul>
+          <span class="go">Ver modelo →</span>
+        </div>
+      </a>
+      <a href="modelo-3-direto.html">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70" alt="">
+        <div class="body">
+          <span class="tag">Modelo 3</span><h2>Direto</h2>
+          <div class="meter"><span>Texto <b>●○○</b></span><span>Imagens <b>●○○</b></span></div>
+          <p>Feito para receber o maior número de pedidos.</p>
+          <ul><li>Formulário de orçamento logo no topo</li><li>Serviços numa lista com ícones</li><li>Página curta e rápida</li></ul>
+          <span class="go">Ver modelo →</span>
+        </div>
+      </a>
+      <a href="modelo-4-interativo.html">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=70" alt="">
+        <div class="body">
+          <span class="tag">Modelo 4 · Novo</span><h2>Interativo</h2>
+          <div class="meter"><span>Texto <b>●●○</b></span><span>Imagens <b>●●●</b></span><span>Interação <b>●●●</b></span></div>
+          <p>O site mais original: o visitante explora o jardim e monta o seu pedido.</p>
+          <ul><li>Paisagem que muda com as estações do ano</li><li>Fotografia com pontos para explorar cada serviço</li><li>Orçamento em 4 passos, com resumo ao lado</li></ul>
+          <span class="go">Ver modelo →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelo 4 · Interativo · FloresESer</title>
+<meta name="description" content="FloresESer: manutenção e construção de jardins e piscinas. Explore o seu jardim e peça o orçamento em 4 passos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=3">
+<link rel="stylesheet" href="modelos.css?v=3">
+<link rel="stylesheet" href="interativo.css?v=3">
+</head>
+<body class="ix">
+<div class="model-bar"><span>Proposta · fotos ilustrativas</span><a href="index.html">Todos</a><a href="modelo-1-completo.html">1 · Completo</a><a href="modelo-2-visual.html">2 · Visual</a><a href="modelo-3-direto.html">3 · Direto</a><a href="modelo-4-interativo.html" class="on">4 · Interativo</a></div>
+
+<header class="topbar" id="topo">
+  <div class="wrap topbar-inner">
+    <a href="#topo" class="logo"><span class="logo-mark">❀</span><span>Flores<em>E</em>Ser</span></a>
+    <nav class="nav" id="nav">
+      <a href="#explorar">Explorar o jardim</a>
+      <a href="#antes-depois">Antes e depois</a>
+      <a href="#como">Como trabalhamos</a>
+      <a href="#galeria">Trabalhos</a>
+      <a href="#orcamento" class="btn btn-sm">Pedir orçamento <span class="basket-count" data-basket-count hidden>0</span></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===================== HERO: AS ESTAÇÕES ===================== -->
+<section class="sx" id="estacoes" data-season="outono">
+  <canvas class="sx-particles" aria-hidden="true"></canvas>
+  <svg class="sx-scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" class="sky-top"/><stop offset="1" class="sky-bottom"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="800" fill="url(#sky)"/>
+    <circle class="sun" cx="1120" cy="210" r="70"/>
+    <path class="hill hill-3" d="M0 520 C 240 430 420 470 640 500 S 1080 420 1440 470 V800 H0Z"/>
+    <path class="hill hill-2" d="M0 600 C 200 540 380 560 560 590 S 980 520 1440 580 V800 H0Z"/>
+    <g class="trees">
+      <g transform="translate(180 470)"><rect class="trunk" x="-6" y="40" width="12" height="70" rx="3"/><circle class="crown" cx="0" cy="20" r="52"/><circle class="crown c2" cx="-34" cy="44" r="34"/><circle class="crown c2" cx="34" cy="46" r="32"/></g>
+      <g transform="translate(1260 455) scale(1.2)"><rect class="trunk" x="-6" y="40" width="12" height="70" rx="3"/><circle class="crown" cx="0" cy="20" r="52"/><circle class="crown c2" cx="-34" cy="44" r="34"/><circle class="crown c2" cx="34" cy="46" r="32"/></g>
+      <g transform="translate(1040 520) scale(.75)"><rect class="trunk" x="-5" y="30" width="10" height="70" rx="3"/><path class="crown" d="M0 -70 L48 40 H-48Z"/><path class="crown c2" d="M0 -30 L58 70 H-58Z"/></g>
+    </g>
+    <path class="hill hill-1" d="M0 690 C 260 640 520 660 760 690 S 1200 650 1440 680 V800 H0Z"/>
+    <g class="flowers" id="flowers"></g>
+    <rect class="pool" x="760" y="712" width="420" height="58" rx="29"/>
+    <path class="pool-shine" d="M800 735 h120 M960 748 h160"/>
+  </svg>
+
+  <div class="wrap sx-content">
+    <p class="eyebrow">Jardins · Piscinas · Espaços verdes</p>
+    <h1>Um jardim bonito em <em class="sx-name">todas as estações</em>.</h1>
+    <p class="lead">Cada estação pede cuidados diferentes. Escolha uma e veja o que fazemos pelo seu jardim e pela sua piscina.</p>
+
+    <div class="sx-tabs" role="tablist" aria-label="Escolher estação">
+      <button role="tab" data-s="primavera">Primavera</button>
+      <button role="tab" data-s="verao">Verão</button>
+      <button role="tab" data-s="outono">Outono</button>
+      <button role="tab" data-s="inverno">Inverno</button>
+    </div>
+
+    <div class="sx-card" aria-live="polite">
+      <h2 class="sx-card-title"></h2>
+      <ul class="sx-card-list"></ul>
+      <button class="btn" id="seasonPlan">Pedir este plano</button>
+    </div>
+  </div>
+  <a href="#explorar" class="sx-scroll" aria-label="Descer">Descubra mais<span></span></a>
+</section>
+
+<!-- ===================== EXPLORAR O JARDIM ===================== -->
+<section class="section ex" id="explorar">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Interativo</p>
+      <h2>Explore o jardim</h2>
+      <p>Toque nos pontos para ver o que fazemos em cada zona. Junte ao orçamento os serviços que lhe interessam.</p>
+    </div>
+    <div class="ex-grid">
+      <div class="ex-photo">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=75" alt="Moradia com jardim, palmeiras e piscina">
+        <button class="hs" style="left:55%;top:84%" data-k="piscina"><span>Piscina</span></button>
+        <button class="hs" style="left:9%;top:75%" data-k="relva"><span>Relvado</span></button>
+        <button class="hs" style="left:17%;top:36%" data-k="poda"><span>Árvores</span></button>
+        <button class="hs" style="left:25%;top:68%" data-k="plantas"><span>Plantas</span></button>
+        <button class="hs" style="left:89%;top:63%" data-k="rega"><span>Floreiras</span></button>
+        <button class="hs" style="left:22%;top:90%" data-k="construcao"><span>Pavimento</span></button>
+      </div>
+      <aside class="ex-panel" aria-live="polite">
+        <div class="ex-empty">
+          <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8" opacity=".4"/></svg>
+          <p><strong>Escolha um ponto na fotografia</strong> para ver o serviço.</p>
+        </div>
+        <div class="ex-info" hidden>
+          <p class="eyebrow ex-zone"></p>
+          <h3 class="ex-title"></h3>
+          <p class="ex-text"></p>
+          <ul class="ex-list"></ul>
+          <button class="btn ex-add">+ Adicionar ao orçamento</button>
+        </div>
+        <div class="ex-basket">
+          <p>No seu orçamento: <strong data-basket-text>nenhum serviço</strong></p>
+          <a href="#orcamento" class="ex-go">Continuar →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NÚMEROS ===================== -->
+<section class="nums">
+  <div class="wrap nums-grid">
+    <div><strong data-count="10">0</strong><span>anos a cuidar de jardins</span></div>
+    <div><strong data-count="350">0</strong><span>jardins mantidos</span></div>
+    <div><strong data-count="120">0</strong><span>piscinas tratadas</span></div>
+    <div><strong data-count="24" data-suffix="h">0</strong><span>para responder ao seu pedido</span></div>
+  </div>
+</section>
+
+<!-- ===================== ANTES E DEPOIS ===================== -->
+<section class="section" id="antes-depois">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Antes e depois</p>
+      <h2>A diferença vê-se</h2>
+      <p>Arraste a barra para comparar o mesmo espaço antes e depois da nossa intervenção.</p>
+    </div>
+    <div class="ba" id="ba">
+      <img class="ba-after" src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?w=1600&q=70" alt="Depois: jardim cuidado e florido">
+      <div class="ba-before"><img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?w=1600&q=70" alt="Antes: vegetação densa por tratar"></div>
+      <span class="ba-tag l">Antes</span><span class="ba-tag r">Depois</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
+      <div class="ba-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMO TRABALHAMOS (caule que cresce) ===================== -->
+<section class="section grow" id="como">
+  <div class="wrap">
+    <div class="section-head light">
+      <p class="eyebrow">Como trabalhamos</p>
+      <h2>Do pedido ao jardim cuidado</h2>
+    </div>
+    <div class="grow-track">
+      <div class="stem"><div class="stem-fill"></div></div>
+      <div class="gstep"><span class="leaf"></span><div><b>01</b><h3>Pede o orçamento</h3><p>Em 4 passos simples, aqui no site, em menos de 2 minutos.</p></div></div>
+      <div class="gstep"><span class="leaf"></span><div><b>02</b><h3>Visitamos o espaço</h3><p>Avaliamos o jardim ou a piscina no local, sem qualquer custo.</p></div></div>
+      <div class="gstep"><span class="leaf"></span><div><b>03</b><h3>Recebe a proposta</h3><p>Um orçamento claro, por email, com tudo o que está incluído.</p></div></div>
+      <div class="gstep"><span class="leaf"></span><div><b>04</b><h3>O seu jardim floresce</h3><p>A nossa equipa trata de tudo, no dia e com a frequência combinados.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALERIA (arrastar) ===================== -->
+<section class="section gal" id="galeria">
+  <div class="wrap gal-head">
+    <div>
+      <p class="eyebrow">Trabalhos</p>
+      <h2>Espaços que cuidamos</h2>
+    </div>
+    <div class="gal-arrows">
+      <button data-dir="-1" aria-label="Anterior">←</button>
+      <button data-dir="1" aria-label="Seguinte">→</button>
+    </div>
+  </div>
+  <div class="gal-rail" id="rail" tabindex="0" aria-label="Galeria de trabalhos, arraste para ver mais">
+    <figure><img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=900&q=70" alt="" draggable="false"><figcaption>Caminho com roseiras</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=900&q=70" alt="" draggable="false"><figcaption>Piscina e jardim moderno</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1534710961216-75c88202f43e?w=900&q=70" alt="" draggable="false"><figcaption>Canteiros de alho-ornamental</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=900&q=70" alt="" draggable="false"><figcaption>Horta elevada</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1558293842-c0fd3db86157?w=900&q=70" alt="" draggable="false"><figcaption>Túnel de glicínias</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=900&q=70" alt="" draggable="false"><figcaption>Piscina em pedra</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900&q=70" alt="" draggable="false"><figcaption>Relvado de moradia</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=900&q=70" alt="" draggable="false"><figcaption>Jardim tropical</figcaption></figure>
+  </div>
+</section>
+
+<!-- ===================== ORÇAMENTO EM 4 PASSOS ===================== -->
+<section class="section wz-sec" id="orcamento">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Orçamento grátis</p>
+      <h2>Monte o seu pedido</h2>
+      <p>4 passos rápidos. Respondemos por email em até 24 horas úteis.</p>
+    </div>
+
+    <div class="wz">
+      <form class="wz-form" id="wizard" novalidate>
+        <ol class="wz-progress" aria-label="Passos">
+          <li class="on"><span>1</span>Serviços</li>
+          <li><span>2</span>Espaço</li>
+          <li><span>3</span>Detalhes</li>
+          <li><span>4</span>Contactos</li>
+        </ol>
+
+        <!-- Passo 1 -->
+        <fieldset class="wz-step on" data-step="1">
+          <legend>Do que precisa?</legend>
+          <div class="svc-grid">
+            <label class="svc"><input type="checkbox" name="servicos" value="Manutenção de jardins"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=500&q=60" alt=""><span>Manutenção de jardins</span></label>
+            <label class="svc"><input type="checkbox" name="servicos" value="Construção de jardins"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=60" alt=""><span>Construção de jardins</span></label>
+            <label class="svc"><input type="checkbox" name="servicos" value="Manutenção de piscinas"><img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?w=500&q=60" alt=""><span>Manutenção de piscinas</span></label>
+            <label class="svc"><input type="checkbox" name="servicos" value="Construção de piscinas"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=60" alt=""><span>Construção de piscinas</span></label>
+            <label class="svc"><input type="checkbox" name="servicos" value="Poda de árvores"><img src="https://images.unsplash.com/photo-1617576683096-00fc8eecb3af?w=500&q=60" alt=""><span>Poda de árvores</span></label>
+            <label class="svc"><input type="checkbox" name="servicos" value="Sistemas de rega"><img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?w=500&q=60" alt=""><span>Sistemas de rega</span></label>
+            <label class="svc"><input type="checkbox" name="servicos" value="Limpeza de terrenos"><img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?w=500&q=60" alt=""><span>Limpeza de terrenos</span></label>
+            <label class="svc"><input type="checkbox" name="servicos" value="Plantações e hortas"><img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?w=500&q=60" alt=""><span>Plantações e hortas</span></label>
+          </div>
+          <p class="err" data-err="1">Escolha pelo menos um serviço.</p>
+        </fieldset>
+
+        <!-- Passo 2 -->
+        <fieldset class="wz-step" data-step="2">
+          <legend>Como é o seu espaço?</legend>
+          <div class="pills" role="radiogroup" aria-label="Tipo de espaço">
+            <label><input type="radio" name="tipo_espaco" value="Moradia" checked><span>Moradia</span></label>
+            <label><input type="radio" name="tipo_espaco" value="Condomínio"><span>Condomínio</span></label>
+            <label><input type="radio" name="tipo_espaco" value="Empresa"><span>Empresa</span></label>
+            <label><input type="radio" name="tipo_espaco" value="Terreno"><span>Terreno</span></label>
+          </div>
+          <div class="area">
+            <div class="area-top"><span>Área aproximada</span><output id="areaOut">300 m²</output></div>
+            <input type="range" name="area" id="area" min="0" max="100" value="40" aria-label="Área aproximada em metros quadrados">
+            <div class="area-viz"><div class="area-box" id="areaBox"></div><p id="areaHint">≈ um campo de ténis</p></div>
+          </div>
+          <label class="field"><span>Localidade *</span><input name="localidade" required placeholder="Ex.: Cascais"><p class="err">Indique a localidade.</p></label>
+        </fieldset>
+
+        <!-- Passo 3 -->
+        <fieldset class="wz-step" data-step="3">
+          <legend>Com que frequência?</legend>
+          <div class="pills" role="radiogroup" aria-label="Frequência">
+            <label><input type="radio" name="frequencia" value="Serviço pontual" checked><span>Só uma vez</span></label>
+            <label><input type="radio" name="frequencia" value="Semanal"><span>Semanal</span></label>
+            <label><input type="radio" name="frequencia" value="Quinzenal"><span>Quinzenal</span></label>
+            <label><input type="radio" name="frequencia" value="Mensal"><span>Mensal</span></label>
+          </div>
+          <label class="field"><span>Quer acrescentar alguma coisa?</span><textarea name="mensagem" rows="4" placeholder="Ex.: a piscina tem 8x4 m e a relva está muito alta."></textarea></label>
+        </fieldset>
+
+        <!-- Passo 4 -->
+        <fieldset class="wz-step" data-step="4">
+          <legend>Para onde enviamos a proposta?</legend>
+          <div class="row">
+            <label class="field"><span>Nome *</span><input name="nome" required autocomplete="name"><p class="err">Indique o seu nome.</p></label>
+            <label class="field"><span>Telefone *</span><input name="telefone" type="tel" required autocomplete="tel" pattern="[0-9 +()-]{9,}"><p class="err">Indique um telefone válido.</p></label>
+          </div>
+          <label class="field"><span>Email *</span><input name="email" type="email" required autocomplete="email"><p class="err">Indique um email válido.</p></label>
+          <label class="consent"><input type="checkbox" name="consentimento"><span>Aceito que a FloresESer use estes dados para responder ao meu pedido.</span></label>
+          <p class="err" data-err="consent">É necessário aceitar para enviarmos a proposta.</p>
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+        </fieldset>
+
+        <div class="wz-nav">
+          <button type="button" class="btn btn-line" id="wzBack" hidden>← Voltar</button>
+          <button type="button" class="btn" id="wzNext">Continuar →</button>
+          <button type="submit" class="btn" id="wzSend" hidden>Enviar pedido</button>
+        </div>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+
+      <aside class="wz-summary">
+        <h3>O seu pedido</h3>
+        <dl>
+          <dt>Serviços</dt><dd data-sum="servicos">—</dd>
+          <dt>Espaço</dt><dd data-sum="espaco">Moradia · 300 m²</dd>
+          <dt>Localidade</dt><dd data-sum="localidade">—</dd>
+          <dt>Frequência</dt><dd data-sum="frequencia">Só uma vez</dd>
+        </dl>
+        <p class="wz-note">Grátis e sem compromisso. Pode também falar connosco pelo <a href="#" data-wa>WhatsApp</a>.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="footer" id="contactos">
+  <div class="wrap footer-grid">
+    <div>
+      <a href="#topo" class="logo light"><span class="logo-mark">❀</span><span>Flores<em>E</em>Ser</span></a>
+      <p>Manutenção e construção de jardins, espaços verdes e piscinas.</p>
+    </div>
+    <div>
+      <h4>Contactos</h4>
+      <p><a href="tel:+351910000000" data-cfg="phone">910 000 000</a><br><a href="mailto:geral@floreseser.pt" data-cfg="email">geral@floreseser.pt</a></p>
+    </div>
+    <div>
+      <h4>Morada</h4>
+      <p data-cfg="address">Rua Exemplo, 123<br>0000-000 Localidade</p>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <p>Jardins · Piscinas · Rega<br>Poda · Limpeza de terrenos</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© <span id="year"></span> FloresESer. Todos os direitos reservados.</div>
+</footer>
+
+<a href="#" class="whatsapp" id="whatsapp" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script src="../config.js"></script>
+<script src="interativo.js?v=3"></script>
+</body>
+</html>
