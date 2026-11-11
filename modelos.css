@@ -130,3 +130,8 @@ body:not(.nature) .gcol .g img{width:100%;height:100%;object-fit:cover}
 body:not(.nature) .gcol .g{flex:1 0 auto;overflow:hidden}
 @media (max-width:600px){body:not(.nature) .gcol .g{aspect-ratio:auto!important}}
 body:not(.nature) .gallery.gcols{grid-auto-rows:auto;align-items:stretch}
+
+/* Modelo 2: cabeçalho sempre claro, para o logótipo se ver em cima da foto */
+body:has(.v-hero) .topbar{background:rgba(250,250,244,.96);box-shadow:0 2px 16px rgba(0,0,0,.12);backdrop-filter:blur(8px)}
+body:has(.v-hero) .topbar .nav a:not(.btn){color:var(--green-900)}
+body:has(.v-hero) .topbar .menu-btn span{background:var(--green-900)}
