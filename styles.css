@@ -473,3 +473,56 @@ body.nature{
   .logo-img{height:50px}
 }
 .logo-img.logo-h{height:46px}@media (max-width:860px){.logo-img.logo-h{height:40px}}
+
+/* =========================================================
+   Ajustes do esboço (novembro 2026)
+   ========================================================= */
+/* Letra dos títulos: mais limpa e regular */
+.nature{--serif:'Playfair Display',Georgia,serif}
+.nature h1,.nature h2,.nature h3{letter-spacing:-.005em}
+.nature .hero h1{font-weight:700;line-height:1.08}
+
+/* Serviços: texto completo, cartões com a mesma altura */
+.nature .services.rail{align-items:stretch}
+.nature .services.rail .service{flex-basis:clamp(230px,19vw,260px)}
+.nature .services.rail .service p{display:block;-webkit-line-clamp:unset;overflow:visible;font-size:.8rem}
+.nature .services.rail .service-body{display:flex;flex-direction:column}
+.nature .services.rail .service-body a{margin-top:auto}
+
+/* Sem espaço vazio entre os serviços e o orçamento */
+.nature #servicos.section{padding-bottom:20px}
+.nature .quote.section{padding-top:28px}
+
+/* Galeria: fotos inteiras, sem cortes nem buracos (colunas) */
+.nature .gallery{display:block;columns:3 260px;column-gap:12px}
+.nature .gallery .g{display:block;width:100%;margin:0 0 12px;break-inside:avoid;grid-row:auto;grid-column:auto;height:auto}
+.nature .gallery .g img{height:auto;width:100%;display:block}
+@media (max-width:600px){.nature .gallery{columns:2 140px;column-gap:8px}.nature .gallery .g{margin-bottom:8px}}
+
+/* Como funciona: números à frente da linha, num círculo */
+.nature .steps.grow-h::before,.nature .steps.grow-h::after{z-index:0}
+.nature .steps.grow-h li{z-index:1}
+.nature .steps.grow-h li span{z-index:2;border-radius:50%;top:-60px;width:44px;height:44px;display:grid;place-items:center;
+  font-family:var(--sans);font-weight:700;font-size:1.05rem;line-height:1;box-shadow:0 0 0 5px rgba(20,46,22,.9)}
+.nature .steps.grow-h.in li span{transform:scale(1)}
+.nature .steps.grow-h li span{transform:scale(0)}
+@media (max-width:600px){.nature .steps.grow-h li span{top:1rem;left:-58px}}
+/* Galeria em 3 colunas que acabam à mesma altura */
+.nature .gallery.gcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;columns:auto}
+.nature .gcol{display:flex;flex-direction:column;gap:12px;min-width:0}
+.nature .gcol .g{flex:1 1 auto;margin:0;min-height:0;display:block}
+.nature .gcol .g img{width:100%;height:100%;object-fit:cover}
+@media (max-width:600px){
+  .nature .gallery.gcols{display:block;columns:2;column-gap:8px}
+  .nature .gcol{display:contents}
+  .nature .gcol .g{margin-bottom:8px;break-inside:avoid}
+  .nature .gcol .g img{height:auto}
+}
+.nature .gcol .g{flex:1 0 auto;overflow:hidden}
+@media (max-width:600px){.nature .gcol .g{aspect-ratio:auto!important}}
+.nature .gallery.gcols{grid-auto-rows:auto;align-items:stretch}
+/* Passagem suave da foto do topo para o verde (sem corte a direito) */
+.nature .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:220px;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(20,46,22,0) 0%,rgba(20,46,22,.55) 45%,rgb(20,46,22) 100%)}
+.nature .hero-content{position:relative;z-index:2}
+.nature #servicos.section{padding-top:28px}
