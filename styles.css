@@ -429,3 +429,47 @@ body.nature{
   .nature .steps.grow-h.in::after{width:4px;height:100%}
   .nature .steps.grow-h li span{top:1rem;left:-56px}
 }
+
+/* =========================================================
+   Flores & Ser: cores do logótipo (verdes com dourado)
+   ========================================================= */
+.nature{
+  --green-900:#1f4a1c; --green-700:#2f6a24; --green-500:#6a9a2e; --green-100:#e3eed6;
+  --terra:#b8922c; --terra-dark:#9a7a1f; --gold-soft:#e6cb6a;
+}
+body.nature{
+  background:linear-gradient(rgba(20,46,22,.93),rgba(20,46,22,.93)),
+    url('foto-jardim-zen-buda.jpg') center/cover fixed #142e16;
+}
+.nature .eyebrow,.nature .hero .eyebrow,.nature .services-sec .eyebrow,.nature .quote .eyebrow,
+.nature .about .eyebrow,.nature #galeria .eyebrow,.nature .process .eyebrow{color:var(--gold-soft)}
+.nature .about .stats strong{color:var(--gold-soft)}
+.nature .contact-list b{color:var(--gold-soft)}
+.nature .hero h1 em{color:var(--gold-soft)}
+.nature .hero-badges li::before{color:var(--gold-soft)}
+.nature .steps.grow-h::after{background:linear-gradient(90deg,#6a9a2e,var(--gold-soft))}
+.nature .steps.grow-h li span{background:var(--gold-soft);color:#1f4a1c}
+.nature .about .checks li::before{background:var(--terra)}
+.nature .service .tag{color:var(--terra)}
+
+/* cabeçalho sempre claro, para o logótipo se ler bem */
+.nature .topbar,.nature .topbar.scrolled{background:rgba(250,250,244,.97);box-shadow:0 2px 16px rgba(0,0,0,.18)}
+.nature .topbar .nav a:not(.btn),.nature .topbar.scrolled .nav a:not(.btn){color:var(--green-900)}
+.nature .topbar .nav a:not(.btn):hover{color:var(--terra)}
+.nature .topbar .menu-btn span,.nature .topbar.scrolled .menu-btn span{background:var(--green-900)}
+.nature .topbar-inner{height:76px}
+.logo-img{display:block;height:58px;width:auto}
+.nature .hero-content{padding-top:130px}
+.footer-logo .logo-img{height:86px;background:#fafaf4;border-radius:14px;padding:8px 12px}
+.footer-legal{border-top:1px solid rgba(255,255,255,.12);padding:1.1rem 0 .4rem;font-size:.78rem;opacity:.75;display:grid;gap:.3rem}
+.footer-legal a{text-decoration:underline}
+.quote-form .consent a{color:var(--green-700)}
+@media (max-width:860px){
+  .nature .nav{background:#fafaf4}
+  .nature .nav a:not(.btn){color:var(--green-900)!important;border-bottom-color:#e3e7dc}
+  .nature .topbar:has(.nav.open){background:#fafaf4}
+  .nature .topbar:has(.nav.open) .menu-btn span{background:var(--green-900)}
+  .nature .nav{top:76px}
+  .logo-img{height:50px}
+}
+.logo-img.logo-h{height:46px}@media (max-width:860px){.logo-img.logo-h{height:40px}}
