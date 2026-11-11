@@ -118,6 +118,12 @@
 
   // ---- Formulário de orçamento → email ----
   const form = document.getElementById('quoteForm');
+  if (!form) return; // páginas sem formulário
+  // Vindo de outra página com ?servico=... marca esse serviço
+  try {
+    const pre = new URLSearchParams(location.search).get('servico');
+    if (pre) { const cb = form.querySelector(`input[name="servicos"][value="${pre.replace(/"/g, '')}"]`); if (cb) cb.checked = true; }
+  } catch (e) {}
   const status = document.getElementById('formStatus');
   const btn = document.getElementById('submitBtn');
 
