@@ -100,3 +100,33 @@
   .d-tel{display:none}
   .d-hero{padding-top:96px}
 }
+
+/* Modelo 2: sobre nós com logótipo (dados reais) */
+.v-about{background:var(--green-100,#eef3ea)}
+.v-about-grid{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:56px;align-items:center}
+.v-brand{background:#fff;border-radius:22px;padding:38px 28px 30px;text-align:center;box-shadow:0 18px 40px rgba(18,38,27,.12)}
+.v-brand img{width:min(280px,80%);height:auto;display:block;margin:0 auto}
+.v-about .v-brand p{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:#1f4a1c;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(31,74,28,.15)}
+.v-nums{display:flex;gap:2.2rem;margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid rgba(31,74,28,.15)}
+.v-nums strong{display:block;font-family:var(--serif);font-size:2.2rem;color:#b8922c;line-height:1}
+.v-nums span{font-size:.85rem;color:#4b5a4f}
+.v-tiles{grid-template-columns:repeat(3,1fr)}
+.v-tile{aspect-ratio:4/3}
+@media (max-width:860px){.v-about-grid{grid-template-columns:1fr;gap:28px}.v-brand{max-width:420px;margin:0 auto;width:100%}.v-tiles{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.v-tiles{grid-template-columns:1fr 1fr;gap:10px}.v-tile span{font-size:1rem;left:12px;bottom:12px}.v-nums{gap:1.4rem}}
+
+/* Modelo 2: galeria em colunas (igual ao site principal) */
+/* Galeria em 3 colunas que acabam à mesma altura */
+body:not(.nature) .gallery.gcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;columns:auto}
+body:not(.nature) .gcol{display:flex;flex-direction:column;gap:12px;min-width:0}
+body:not(.nature) .gcol .g{flex:1 1 auto;margin:0;min-height:0;display:block}
+body:not(.nature) .gcol .g img{width:100%;height:100%;object-fit:cover}
+@media (max-width:600px){
+  body:not(.nature) .gallery.gcols{display:block;columns:2;column-gap:8px}
+  body:not(.nature) .gcol{display:contents}
+  body:not(.nature) .gcol .g{margin-bottom:8px;break-inside:avoid}
+  body:not(.nature) .gcol .g img{height:auto}
+}
+body:not(.nature) .gcol .g{flex:1 0 auto;overflow:hidden}
+@media (max-width:600px){body:not(.nature) .gcol .g{aspect-ratio:auto!important}}
+body:not(.nature) .gallery.gcols{grid-auto-rows:auto;align-items:stretch}
