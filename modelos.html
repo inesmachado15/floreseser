@@ -4,56 +4,63 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Modelos do site · FloresESer</title>
+<title>Modelos do site · Flores &amp; Ser</title>
+<link rel="icon" href="logotipo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=10">
 <style>
-  body{background:var(--green-100)}
-  .pick{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:960px;margin:0 auto}
-  .pick a{display:flex;flex-direction:column;text-decoration:none;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s}
+  body{background:#f3f5ee;font-family:Inter,system-ui,sans-serif}
+  .brand{display:block;width:min(300px,70%);height:auto;margin:0 auto 1rem}
+  .section-head h1{font-family:"Playfair Display",Georgia,serif;color:#1f4a1c}
+  .pick{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1120px;margin:0 auto}
+  .pick a{display:flex;flex-direction:column;text-decoration:none;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(20,46,22,.12);transition:transform .3s}
   .pick a:hover{transform:translateY(-5px)}
-  .pick img{width:100%;aspect-ratio:16/10;object-fit:cover}
-  .pick .body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
-  .pick .tag{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-weight:600}
-  .pick h2{font-size:1.6rem;margin:4px 0 8px}
-  .pick p{color:var(--muted);font-size:.95rem;margin-bottom:.8rem}
-  .pick ul{margin:0 0 18px;padding-left:18px;color:var(--muted);font-size:.9rem}
-  .pick .go{margin-top:auto;font-weight:600;color:var(--terra)}
-  .meter{display:flex;gap:14px;font-size:.82rem;color:var(--muted);margin-bottom:12px}
-  .meter b{color:var(--green-700)}
-  .logo{color:var(--green-900);justify-content:center;font-size:2.2rem;margin-bottom:.5rem}
-  @media (max-width:900px){.pick{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+  .pick img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+  .pick .body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+  .pick .tag{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#b8922c;font-weight:600}
+  .pick h2{font-family:"Playfair Display",Georgia,serif;font-size:1.5rem;margin:4px 0 8px;color:#1f4a1c}
+  .pick p{color:#4b5a4f;font-size:.95rem;margin-bottom:.8rem}
+  .pick ul{margin:0 0 18px;padding-left:18px;color:#4b5a4f;font-size:.9rem}
+  .pick .go{margin-top:auto;font-weight:600;color:#b8922c}
+  @media (max-width:980px){.pick{grid-template-columns:1fr;max-width:520px}}
 </style>
 </head>
 <body>
 <main class="section">
   <div class="wrap">
     <div class="section-head">
-      <div class="logo"><span class="logo-mark">❀</span><span>Flores<em>E</em>Ser</span></div>
+      <img class="brand" src="logotipo.png" alt="Flores &amp; Ser · Jardins e Piscinas">
       <h1 style="font-size:clamp(1.9rem,3.6vw,2.6rem)">Escolha o estilo do site</h1>
-      <p>Duas propostas com o mesmo conteúdo e o mesmo formulário de orçamento, mas com formas diferentes de o mostrar. As fotografias são apenas exemplos.</p>
+      <p>Três propostas com o mesmo conteúdo, as vossas fotografias e o mesmo formulário de orçamento, mas com formas diferentes de o mostrar.</p>
     </div>
     <div class="pick">
       <a href="modelo-1-completo.html">
-        <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?w=900&q=70" alt="">
+        <img src="foto-relvado-lajes-p.jpg" alt="">
         <div class="body">
-          <span class="tag">Modelo 1</span><h2>Completo</h2>
-          <div class="meter"><span>Texto <b>●●●</b></span><span>Imagens <b>●●○</b></span></div>
-          <p>Explica bem cada serviço e passa confiança.</p>
-          <ul><li>Fotografias a passar no topo</li><li>Cada serviço com foto e explicação</li><li>Sobre nós, galeria e como funciona</li></ul>
-          <span class="go">Ver modelo →</span>
+          <span class="tag">Opção 1</span><h2>Página única</h2>
+          <p>Tudo numa só página, do topo ao formulário.</p>
+          <ul><li>Fotografias a passar no topo</li><li>Serviços numa faixa para deslizar</li><li>Orçamento logo a seguir aos serviços</li></ul>
+          <span class="go">Ver opção →</span>
+        </div>
+      </a>
+      <a href="pag-index.html">
+        <img src="foto-jardim-zen-p.jpg" alt="">
+        <div class="body">
+          <span class="tag">Opção 2</span><h2>Com várias páginas</h2>
+          <p>O mesmo estilo, organizado em páginas separadas.</p>
+          <ul><li>Início, Serviços, Trabalhos e Sobre nós</li><li>Os 9 serviços numa página própria</li><li>Galeria completa numa página só</li></ul>
+          <span class="go">Ver opção →</span>
         </div>
       </a>
       <a href="modelo-2-visual.html">
-        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=900&q=70" alt="">
+        <img src="foto-piscina-relvado-p.jpg" alt="">
         <div class="body">
-          <span class="tag">Modelo 2</span><h2>Visual</h2>
-          <div class="meter"><span>Texto <b>●○○</b></span><span>Imagens <b>●●●</b></span></div>
-          <p>Entra pelos olhos: os trabalhos falam por si.</p>
-          <ul><li>Fotografia em ecrã inteiro</li><li>Comparação antes e depois</li><li>Galeria grande de trabalhos</li></ul>
-          <span class="go">Ver modelo →</span>
+          <span class="tag">Opção 3</span><h2>Visual</h2>
+          <p>Mais fotografia, menos texto: os trabalhos falam por si.</p>
+          <ul><li>Fotografia em ecrã inteiro</li><li>Serviços em quadros com foto</li><li>Galeria grande de trabalhos</li></ul>
+          <span class="go">Ver opção →</span>
         </div>
       </a>
     </div>
