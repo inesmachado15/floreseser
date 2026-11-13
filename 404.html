@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Página não encontrada · Flores &amp; Ser</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;
+    font-family:Inter,system-ui,sans-serif;color:#fff;background:#14301a;
+    background:linear-gradient(rgba(20,46,22,.82),rgba(20,46,22,.92)),url('/foto-jardim-zen-buda-p.jpg') center/cover fixed}
+  .card{max-width:480px;width:100%;text-align:center}
+  .logo{background:#fafaf4;border-radius:20px;padding:22px 26px;display:inline-block;margin-bottom:28px;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+  .logo img{width:220px;height:auto;display:block}
+  .eyebrow{color:#e6cb6a;letter-spacing:.18em;text-transform:uppercase;font-size:.8rem;font-weight:600}
+  h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,6vw,2.8rem);margin:.4rem 0 .8rem}
+  p{color:rgba(255,255,255,.85);line-height:1.6;margin-bottom:1.6rem}
+  .btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+  a.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;background:#b8922c;color:#fff}
+  a.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.6)}
+</style>
+</head>
+<body>
+<main class="card">
+  <a class="logo" href="/" data-home><img src="/logotipo.png" alt="Flores &amp; Ser · Jardins e Piscinas" data-asset></a>
+  <p class="eyebrow">Erro 404</p>
+  <h1>Esta página não existe</h1>
+  <p>O endereço pode estar errado ou a página pode ter mudado de sítio. Volte ao início ou peça já o seu orçamento grátis.</p>
+  <div class="btns">
+    <a class="btn" href="/" data-home>Voltar ao início</a>
+    <a class="btn ghost" href="https://wa.me/351917928151">WhatsApp 917 928 151</a>
+  </div>
+</main>
+<script>
+  // No protótipo (github.io/floreseser/) o site está numa subpasta.
+  (function () {
+    var base = location.pathname.indexOf('/floreseser/') === 0 ? '/floreseser/' : '/';
+    if (base === '/') return;
+    document.querySelectorAll('[data-home]').forEach(function (a) { a.href = base; });
+    document.querySelectorAll('[data-asset]').forEach(function (i) { i.src = base + i.getAttribute('src').slice(1); });
+    document.body.style.backgroundImage = "linear-gradient(rgba(20,46,22,.82),rgba(20,46,22,.92)),url('" + base + "foto-jardim-zen-buda-p.jpg')";
+  })();
+</script>
+</body>
+</html>
