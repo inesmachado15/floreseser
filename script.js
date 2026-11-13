@@ -155,7 +155,7 @@
       _template: 'table',
       _captcha: 'false',
       _replyto: fd.get('email'),
-      _autoresponse: 'Obrigado pelo seu pedido! Recebemos a sua mensagem e a equipa FloresESer responde em até 24 horas úteis.',
+      _autoresponse: 'Obrigado pelo seu pedido! Recebemos a sua mensagem e a equipa Flores & Ser responde em até 24 horas úteis.',
       'Nome': fd.get('nome'),
       'Email': fd.get('email'),
       'Telefone': fd.get('telefone'),
