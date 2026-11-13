@@ -95,7 +95,7 @@
   if (lb && items.length) {
   const lbImg = lb.querySelector('img');
   let idx = 0;
-  const show = i => { idx = (i + items.length) % items.length; lbImg.src = items[idx].src.replace(/w=\d+/, 'w=1800'); lbImg.alt = items[idx].alt; };
+  const show = i => { idx = (i + items.length) % items.length; lbImg.src = items[idx].dataset.full || items[idx].src; lbImg.alt = items[idx].alt; };
   items.forEach((img, i) => img.parentElement.addEventListener('click', () => { show(i); lb.hidden = false; document.body.style.overflow = 'hidden'; }));
   const close = () => { lb.hidden = true; document.body.style.overflow = ''; };
   lb.querySelector('.lb-close').onclick = close;
