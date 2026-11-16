@@ -11,6 +11,10 @@ window.SITE_CONFIG = {
   // email no envio do formulário, para o endereço não ficar exposto a spam.
   formId: "a9463ea6def9406f0782678e40f3c636",
 
+  // Chave do Web3Forms (chegou ao geral@). Com ela, o formulário usa o
+  // Web3Forms, que responde em 1–2 s. Vazia = usa o FormSubmit.
+  web3formsKey: "bc03366b-3566-40a0-92c8-9682a5ebbd06",
+
   // Telefone e WhatsApp do Joel (o mesmo número)
   phoneDisplay: "917 928 151",
   phoneIntl: "351917928151",
