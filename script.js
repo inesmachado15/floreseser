@@ -169,15 +169,22 @@
 
     btn.disabled = true; btn.textContent = 'A enviar…';
     status.className = 'form-status';
+    // Envio: Web3Forms quando há chave em config.js (rápido); senão, FormSubmit.
+    const campos = Object.fromEntries(Object.entries(data).filter(([k]) => !k.startsWith('_')));
+    const envio = C.web3formsKey
+      ? { url: 'https://api.web3forms.com/submit',
+          body: { access_key: C.web3formsKey, subject: data._subject, from_name: 'Site Flores & Ser',
+                  replyto: fd.get('email'), botcheck: '', ...campos } }
+      : { url: 'https://formsubmit.co/ajax/' + encodeURIComponent(C.formId || C.email), body: data };
     try {
       // Se o serviço não responder em 40 s, mostramos a alternativa (email/telefone)
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), 40000);
-      const res = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(C.formId || C.email), {
+      const res = await fetch(envio.url, {
         signal: ctrl.signal,
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(envio.body),
       });
       clearTimeout(timer);
       const json = await res.json().catch(() => ({}));
