@@ -170,11 +170,16 @@
     btn.disabled = true; btn.textContent = 'A enviar…';
     status.className = 'form-status';
     try {
+      // Se o serviço não responder em 25 s, mostramos a alternativa (email/telefone)
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 25000);
       const res = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(C.email), {
+        signal: ctrl.signal,
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data),
       });
+      clearTimeout(timer);
       const json = await res.json().catch(() => ({}));
       if (!res.ok || json.success === 'false' || json.success === false) throw new Error(json.message || 'Erro');
       form.reset();
