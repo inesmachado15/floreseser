@@ -79,3 +79,8 @@
 .paginas .about .about-brand .slogan{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.2vw,1.6rem);color:#1f4a1c;margin-top:1rem;
   padding-top:1rem;border-top:1px solid rgba(31,74,28,.15)}
 @media (max-width:600px){.about-brand{padding:28px 20px 24px}}
+
+/* Faixa do topo das páginas: versão leve no telemóvel */
+@media (max-width:700px){
+  .page-hero{background:linear-gradient(to bottom,rgba(20,46,22,.35),rgba(20,46,22,.55) 60%,rgb(20,46,22)),var(--ph-p,var(--ph)) center/cover no-repeat}
+}
