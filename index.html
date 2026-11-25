@@ -4,14 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flores &amp; Ser · Jardins e Piscinas</title>
-<meta name="description" content="Flores &amp; Ser: manutenção e criação de jardins, jardins zen, manutenção de piscinas, sistemas de rega, poda e limpeza de terrenos em Sintra, Cascais, Oeiras e Mafra. Peça o seu orçamento grátis.">
-<meta name="robots" content="noindex"><!-- PROTOTIPO: tirar no lançamento -->
+<meta name="description" content="Flores &amp; Ser: manutenção e criação de jardins, jardins zen e manutenção de piscinas em Sintra, Cascais, Oeiras e Mafra. Peça o seu orçamento grátis.">
 <link rel="canonical" href="https://floreseser.pt/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_PT">
 <meta property="og:site_name" content="Flores &amp; Ser">
 <meta property="og:title" content="Flores &amp; Ser · Jardins e Piscinas">
-<meta property="og:description" content="Manutenção e criação de jardins, jardins zen e manutenção de piscinas em Sintra, Cascais, Oeiras e Mafra. Orçamento grátis.">
+<meta property="og:description" content="Flores &amp; Ser: manutenção e criação de jardins, jardins zen e manutenção de piscinas em Sintra, Cascais, Oeiras e Mafra. Peça o seu orçamento grátis.">
 <meta property="og:url" content="https://floreseser.pt/">
 <meta property="og:image" content="https://floreseser.pt/og-imagem.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,24 +22,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="paginas.css?v=5">
 </head>
-<body class="nature">
+<body class="nature paginas">
 
 <header class="topbar" id="topo">
   <div class="wrap topbar-inner">
-    <a href="#topo" class="logo"><img class="logo-img logo-r" src="logotipo.png" alt="Flores &amp; Ser · Jardins e Piscinas"></a>
+    <a href="/" class="logo"><img class="logo-img logo-r" src="logotipo.png" alt="Flores &amp; Ser · Jardins e Piscinas"></a>
     <nav class="nav" id="nav">
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre nós</a>
-      <a href="#galeria">Trabalhos</a>
-      <a href="#processo">Como funciona</a>
-      <a href="#orcamento" class="btn btn-sm">Pedir orçamento</a>
+      <a href="/" aria-current="page">Início</a>
+      <a href="/servicos">Serviços</a>
+      <a href="/trabalhos">Trabalhos</a>
+      <a href="/sobre">Sobre nós</a>
+      <a href="/orcamento#orcamento" class="btn btn-sm">Pedir orçamento</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
-<!-- HERO -->
 <section class="hero">
   <div class="hero-slides">
     <div class="hero-slide active" style="background-image:url('foto-relvado-lajes.jpg')"></div>
@@ -53,8 +51,8 @@
     <h1>Sinta a harmonia no seu jardim.</h1>
     <p class="lead">Bem-vindo à Flores &amp; Ser, o seu parceiro de confiança na criação e preservação de espaços verdes. Cuidamos do seu jardim e piscina, para que possa simplesmente usufruir. Deixe o trabalho exigente nas nossas mãos, transformamos o seu exterior num verdadeiro oásis de beleza e harmonia.</p>
     <div class="hero-cta">
-      <a href="#orcamento" class="btn btn-lg">Pedir orçamento grátis</a>
-      <a href="#servicos" class="btn btn-ghost btn-lg">Ver serviços</a>
+      <a href="/orcamento#orcamento" class="btn btn-lg">Pedir orçamento grátis</a>
+      <a href="/servicos" class="btn btn-ghost btn-lg">Ver serviços</a>
     </div>
     <ul class="hero-badges">
       <li><strong>10 anos</strong> de experiência</li>
@@ -63,179 +61,52 @@
     </ul>
   </div>
 </section>
-
-<!-- SERVIÇOS -->
 <section class="section services-sec" id="servicos">
-  <div class="wrap rail-head">
-    <div>
-      <p class="eyebrow">O que fazemos</p>
-      <h2>Os nossos serviços</h2>
-      <p>Do relvado à piscina, cuidamos de cada espaço verde com harmonia.</p>
+  <div class="wrap">
+    <div class="home-head">
+      <div>
+        <p class="eyebrow">O que fazemos</p>
+        <h2>Os nossos serviços</h2>
+        <p>Do relvado à piscina, cuidamos de cada espaço verde com harmonia.</p>
+      </div>
+      <a class="more" href="/servicos">Mais <span aria-hidden="true">→</span></a>
     </div>
-    <div class="rail-arrows" data-rail="servicesRail">
-      <button type="button" data-dir="-1" aria-label="Serviço anterior">←</button>
-      <button type="button" data-dir="1" aria-label="Serviço seguinte">→</button>
-    </div>
-  </div>
-  <div class="services rail" id="servicesRail" tabindex="0" aria-label="Serviços, arraste para ver mais">
+    <div class="services services-grid four">
       <article class="service">
         <img src="foto-relvado-lajes-p.jpg" srcset="foto-relvado-lajes-p.jpg 800w, foto-relvado-lajes.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-relvado-lajes.jpg" alt="Relvado cuidado com caminho de lajes" loading="lazy">
-        <div class="service-body"><span class="tag">Jardins</span><h3>Manutenção de jardins</h3><p>Cuidamos do seu jardim com dedicação, adaptando o plano de visitas às necessidades reais do seu espaço, para que a beleza e a harmonia estejam sempre presentes e só precise de desfrutar.</p><a href="#orcamento" data-servico="Manutenção de jardins">Pedir orçamento →</a></div>
-      </article>
-      <article class="service">
+        <div class="service-body"><span class="tag">Jardins</span><h3>Manutenção de jardins</h3><p>Cuidamos do seu jardim com dedicação, adaptando o plano de visitas às necessidades reais do seu espaço, para que a beleza e a harmonia estejam sempre presentes e só precise de desfrutar.</p><a href="/orcamento?servico=Manutenção+de+jardins#orcamento">Pedir orçamento →</a></div>
+      </article><article class="service">
         <img src="foto-piscina-relvado-p.jpg" srcset="foto-piscina-relvado-p.jpg 800w, foto-piscina-relvado.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-piscina-relvado.jpg" alt="Piscina limpa rodeada de relvado" loading="lazy">
-        <div class="service-body"><span class="tag">Piscinas</span><h3>Manutenção de piscinas</h3><p>Garantimos água cristalina, segura e pronta a mergulhar. Realizamos limpezas periódicas e controlo químico rigoroso, assim como, a reparação e a manutenção preventiva dos equipamentos.</p><a href="#orcamento" data-servico="Manutenção de piscinas">Pedir orçamento →</a></div>
-      </article>
-      <article class="service">
+        <div class="service-body"><span class="tag">Piscinas</span><h3>Manutenção de piscinas</h3><p>Garantimos água cristalina, segura e pronta a mergulhar.</p><a href="/orcamento?servico=Manutenção+de+piscinas#orcamento">Pedir orçamento →</a></div>
+      </article><article class="service">
         <img src="foto-jardim-palmeira-p.jpg" srcset="foto-jardim-palmeira-p.jpg 800w, foto-jardim-palmeira.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-palmeira.jpg" alt="Jardim novo com palmeira, relva e roseiras" loading="lazy">
-        <div class="service-body"><span class="tag">Jardins</span><h3>Criação de jardins</h3><p>Acreditamos que cada jardim tem uma identidade própria. Dedicamo-nos à criação de jardins personalizados, onde cada planta, cada elemento e cada detalhe são cuidadosamente pensados para criar ambientes harmoniosos, funcionais e em perfeita sintonia com a natureza. Desde a escolha das espécies à organização dos espaços, procuramos aliar a criatividade ao conhecimento técnico, respeitando as características de cada local e os desejos de quem lá vive.</p><a href="#orcamento" data-servico="Criação de jardins">Pedir orçamento →</a></div>
-      </article>
-      <article class="service">
+        <div class="service-body"><span class="tag">Jardins</span><h3>Criação de jardins</h3><p>Acreditamos que cada jardim tem uma identidade própria.</p><a href="/orcamento?servico=Criação+de+jardins#orcamento">Pedir orçamento →</a></div>
+      </article><article class="service">
         <img src="foto-jardim-zen-p.jpg" srcset="foto-jardim-zen-p.jpg 800w, foto-jardim-zen.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-zen.jpg" alt="Jardim zen com seixo branco, pedras e deck de madeira" loading="lazy">
-        <div class="service-body"><span class="tag">Zen</span><h3>Jardins zen</h3><p>Espaços que convidam à contemplação e trazem bem-estar, harmonia e equilíbrio, inspirados na cultura japonesa e na tradição budista.</p><a href="#orcamento" data-servico="Jardins zen">Pedir orçamento →</a></div>
+        <div class="service-body"><span class="tag">Zen</span><h3>Jardins zen</h3><p>Espaços que convidam à contemplação e trazem bem-estar, harmonia e equilíbrio, inspirados na cultura japonesa e na tradição budista.</p><a href="/orcamento?servico=Jardins+zen#orcamento">Pedir orçamento →</a></div>
       </article>
-      <article class="service">
-        <img src="foto-relvado-entrada-p.jpg" srcset="foto-relvado-entrada-p.jpg 800w, foto-relvado-entrada.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-relvado-entrada.jpg" alt="Relvado de entrada com sebe de árvores" loading="lazy">
-        <div class="service-body"><span class="tag">Árvores</span><h3>Poda e abate de árvores</h3><p>Poda e abate de árvores, arbustos e sebes, com atenção à saúde e à estética das suas plantas.</p><a href="#orcamento" data-servico="Poda e abate de árvores">Pedir orçamento →</a></div>
-      </article>
-      <article class="service">
-        <img src="foto-jardim-encosta-p.jpg" srcset="foto-jardim-encosta-p.jpg 800w, foto-jardim-encosta.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-encosta.jpg" alt="Jardim em encosta com rega gota-a-gota" loading="lazy">
-        <div class="service-body"><span class="tag">Rega</span><h3>Sistemas de rega</h3><p>Instalamos sistemas de rega à medida da exigência de cada jardim e de cada planta, e das necessidades de cada cliente.</p><a href="#orcamento" data-servico="Sistemas de rega">Pedir orçamento →</a></div>
-      </article>
-      <article class="service">
-        <img src="foto-limpeza-terreno-p.jpg" srcset="foto-limpeza-terreno-p.jpg 800w, foto-limpeza-terreno.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-limpeza-terreno.jpg" alt="Terreno limpo, com a vegetação cortada" loading="lazy">
-        <div class="service-body"><span class="tag">Terrenos</span><h3>Limpeza de terrenos</h3><p>Limpeza de terrenos de todo o tipo, com remoção dos resíduos.</p><a href="#orcamento" data-servico="Limpeza de terrenos">Pedir orçamento →</a></div>
-      </article>
-      <article class="service">
-        <img src="foto-horta-elevada-p.jpg" srcset="foto-horta-elevada-p.jpg 800w, foto-horta-elevada.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-horta-elevada.jpg" alt="Horta elevada em madeira com plantas a crescer" loading="lazy">
-        <div class="service-body"><span class="tag">Hortas</span><h3>Hortas elevadas</h3><p>Estruturas elevadas para hortas, que facilitam o trabalho e se integram no espaço envolvente.</p><a href="#orcamento" data-servico="Hortas elevadas">Pedir orçamento →</a></div>
-      </article>
-      <article class="service">
-        <img src="foto-coberturas-verdes-p.jpg" srcset="foto-coberturas-verdes-p.jpg 800w, foto-coberturas-verdes.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-coberturas-verdes.jpg" alt="Cobertura verde: antes e depois (simulação do projeto)" loading="lazy">
-        <div class="service-body"><span class="tag">Coberturas verdes</span><h3>Coberturas verdes</h3><p>Espaços verdes em zonas sem terra, como terraços e coberturas, feitos com segurança e garantia de qualidade.</p><a href="#orcamento" data-servico="Coberturas verdes">Pedir orçamento →</a></div>
-      </article>
-  </div>
-</section>
-
-<!-- ORÇAMENTO -->
-<section class="section quote" id="orcamento">
-  <div class="wrap quote-grid">
-    <div class="quote-side">
-      <p class="eyebrow">Orçamento grátis</p>
-      <h2>Peça o seu orçamento</h2>
-      <p>Diga-nos o que precisa e respondemos por email. Sem compromisso.</p>
-      <ul class="contact-list">
-        <li><b>Telefone e WhatsApp</b><a href="tel:+351917928151" data-cfg="phone">917 928 151</a></li>
-        <li><b>Email</b><a href="mailto:geral@floreseser.pt" data-cfg="email">geral@floreseser.pt</a></li>
-        <li><b>Onde trabalhamos</b><span>Sintra, Cascais, Oeiras e Mafra</span></li>
-      </ul>
-    </div>
-
-    <form class="quote-form" id="quoteForm" novalidate>
-      <fieldset>
-        <legend>Que serviços precisa?</legend>
-        <div class="chips">
-          <label><input type="checkbox" name="servicos" value="Manutenção de jardins"><span>Manutenção de jardins</span></label>
-          <label><input type="checkbox" name="servicos" value="Manutenção de piscinas"><span>Manutenção de piscinas</span></label>
-          <label><input type="checkbox" name="servicos" value="Criação de jardins"><span>Criação de jardins</span></label>
-          <label><input type="checkbox" name="servicos" value="Jardins zen"><span>Jardins zen</span></label>
-          <label><input type="checkbox" name="servicos" value="Poda e abate de árvores"><span>Poda e abate de árvores</span></label>
-          <label><input type="checkbox" name="servicos" value="Sistemas de rega"><span>Sistemas de rega</span></label>
-          <label><input type="checkbox" name="servicos" value="Limpeza de terrenos"><span>Limpeza de terrenos</span></label>
-          <label><input type="checkbox" name="servicos" value="Hortas elevadas"><span>Hortas elevadas</span></label>
-          <label><input type="checkbox" name="servicos" value="Coberturas verdes"><span>Coberturas verdes</span></label>
-        </div>
-        <p class="err" data-for="servicos">Escolha pelo menos um serviço.</p>
-      </fieldset>
-
-      <div class="row">
-        <label class="field"><span>Nome *</span><input name="nome" required autocomplete="name"><p class="err">Indique o seu nome.</p></label>
-        <label class="field"><span>Telefone *</span><input name="telefone" type="tel" required autocomplete="tel" pattern="[0-9 +()-]{9,}"><p class="err">Indique um telefone válido.</p></label>
-      </div>
-      <div class="row">
-        <label class="field"><span>Email *</span><input name="email" type="email" required autocomplete="email"><p class="err">Indique um email válido.</p></label>
-        <label class="field"><span>Localidade *</span><input name="localidade" required placeholder="Ex.: Sintra"><p class="err">Indique a localidade.</p></label>
-      </div>
-      <div class="row3">
-        <label class="field"><span>Tipo de espaço</span>
-          <select name="tipo_espaco"><option>Moradia</option><option>Condomínio</option><option>Empresa</option><option>Terreno</option><option>Outro</option></select>
-        </label>
-        <label class="field"><span>Frequência</span>
-          <select name="frequencia"><option>Serviço pontual</option><option>Semanal</option><option>Quinzenal</option><option>Mensal</option><option>Ainda não sei</option></select>
-        </label>
-        <label class="field"><span>Área (m²)</span><input name="area" inputmode="numeric" placeholder="Ex.: 300"></label>
-      </div>
-      <label class="field"><span>Descreva o que precisa</span><textarea name="mensagem" rows="2" placeholder="Ex.: Jardim com 300 m² de relva e piscina de 8x4 m, precisamos de manutenção quinzenal."></textarea></label>
-      <label class="consent"><input type="checkbox" name="consentimento" required><span>Aceito que a Flores &amp; Ser use estes dados para responder ao meu pedido (ver a <a href="politica-privacidade.html">política de privacidade</a>).</span></label>
-      <p class="err" data-for="consentimento">É necessário aceitar para enviarmos o orçamento.</p>
-      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
-      <button type="submit" class="btn btn-lg btn-block" id="submitBtn">Enviar pedido de orçamento</button>
-      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-    </form>
-  </div>
-</section>
-
-<!-- SOBRE -->
-<section class="section about" id="sobre">
-  <div class="wrap about-grid">
-    <div class="about-images">
-      <img class="a1" src="foto-flores-p.jpg" srcset="foto-flores-p.jpg 800w, foto-flores.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-flores.jpg" alt="Canteiro com buganvílias e sardinheiras em flor" loading="lazy">
-      <img class="a2" src="foto-caminho-seixos-p.jpg" srcset="foto-caminho-seixos-p.jpg 800w, foto-caminho-seixos.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-caminho-seixos.jpg" alt="Caminho de lajes e seixo branco junto a um jardim" loading="lazy">
-    </div>
-    <div>
-      <p class="eyebrow">Sobre nós</p>
-      <h2>Harmonia em cada espaço verde</h2>
-      <p>A <strong>Flores &amp; Ser</strong> é uma empresa especializada na criação, conservação e manutenção integral de jardins e piscinas, dotada de uma equipa motivada e experiente que dá sempre o seu melhor.</p>
-      <p>O nosso objetivo é trazer harmonia a cada espaço e criar ambientes que despertem os melhores sentimentos em quem os vive e visita.</p>
-      <p>Acreditamos que o seu jardim e a sua piscina são muito mais do que simples áreas da casa. São refúgios pessoais onde o tempo abranda, a natureza ganha vida e o bem-estar acontece.</p>
-      <p>Combinamos paixão, rigor técnico e respeito pelo meio ambiente para cuidar de cada detalhe do seu espaço exterior ao longo de todo o ano. Mais do que tratar de jardins, queremos dar vida a espaços onde apetece estar, relaxar e sentir a natureza.</p>
-      <ul class="checks">
-        <li>Jardins, piscinas e espaços verdes</li>
-        <li>Manutenção regular</li>
-        <li>Criação e renovação de jardins</li>
-        <li>Orçamento grátis</li>
-      </ul>
-      <div class="stats">
-        <div><strong data-count="10">0</strong><span>anos de experiência</span></div>
-        <div><strong>4</strong><span>concelhos: Sintra, Cascais, Oeiras e Mafra</span></div>
-        <div><strong>9</strong><span>serviços para o seu espaço exterior</span></div>
-      </div>
     </div>
   </div>
 </section>
-
-<!-- GALERIA -->
 <section class="section" id="galeria">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Trabalhos</p>
-      <h2>Os nossos trabalhos</h2>
-      <p>Alguns dos espaços que criámos e mantemos. Clique numa imagem para ampliar.</p>
+    <div class="home-head">
+      <div>
+        <p class="eyebrow">Trabalhos</p>
+        <h2>Alguns trabalhos</h2>
+        <p>Clique numa imagem para ampliar.</p>
+      </div>
+      <a class="more" href="/trabalhos">Mais <span aria-hidden="true">→</span></a>
     </div>
-    <div class="gallery gcols" id="gallery">
-      <div class="gcol">
-        <button class="g" style="aspect-ratio:1125/1500"><img src="foto-relvado-lajes-p.jpg" srcset="foto-relvado-lajes-p.jpg 800w, foto-relvado-lajes.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-relvado-lajes.jpg" alt="Relvado com caminho de lajes" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1600/1200"><img src="foto-jardim-zen-p.jpg" srcset="foto-jardim-zen-p.jpg 800w, foto-jardim-zen.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-zen.jpg" alt="Jardim zen com deck de madeira" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1600/1200"><img src="foto-flores-p.jpg" srcset="foto-flores-p.jpg 800w, foto-flores.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-flores.jpg" alt="Buganvílias e sardinheiras em flor" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1600/1200"><img src="foto-piscina-relvado-p.jpg" srcset="foto-piscina-relvado-p.jpg 800w, foto-piscina-relvado.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-piscina-relvado.jpg" alt="Piscina com relvado" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1600/1200"><img src="foto-relvado-entrada-p.jpg" srcset="foto-relvado-entrada-p.jpg 800w, foto-relvado-entrada.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-relvado-entrada.jpg" alt="Relvado de entrada com sebe" loading="lazy"></button>
-      </div>
-      <div class="gcol">
-        <button class="g" style="aspect-ratio:1500/979"><img src="foto-relvado-passadeira-p.jpg" srcset="foto-relvado-passadeira-p.jpg 800w, foto-relvado-passadeira.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-relvado-passadeira.jpg" alt="Relvado com passadeira de lajes e canteiros em gabião" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1200/1600"><img src="foto-caminho-seixos-p.jpg" srcset="foto-caminho-seixos-p.jpg 800w, foto-caminho-seixos.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-caminho-seixos.jpg" alt="Caminho de lajes e seixo branco" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1394/1500"><img src="foto-horta-elevada-p.jpg" srcset="foto-horta-elevada-p.jpg 800w, foto-horta-elevada.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-horta-elevada.jpg" alt="Horta elevada em madeira" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1200/1600"><img src="foto-jardim-encosta-p.jpg" srcset="foto-jardim-encosta-p.jpg 800w, foto-jardim-encosta.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-encosta.jpg" alt="Jardim em encosta com palmeiras" loading="lazy"></button>
-      </div>
-      <div class="gcol">
-        <button class="g" style="aspect-ratio:1500/1125"><img src="foto-jardim-zen-buda-p.jpg" srcset="foto-jardim-zen-buda-p.jpg 800w, foto-jardim-zen-buda.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-zen-buda.jpg" alt="Jardim zen com estátua de Buda" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1125/1500"><img src="foto-jardim-palmeira-p.jpg" srcset="foto-jardim-palmeira-p.jpg 800w, foto-jardim-palmeira.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-palmeira.jpg" alt="Jardim com palmeira e roseiras" loading="lazy"></button>
-        <button class="g" style="aspect-ratio:1200/1600"><img src="foto-piscina-rega-p.jpg" srcset="foto-piscina-rega-p.jpg 800w, foto-piscina-rega.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-piscina-rega.jpg" alt="Jardim novo junto a uma piscina, com rega" loading="lazy"></button>
-      </div>
+    <div class="top5" id="gallery">
+      <button class="g"><img src="foto-jardim-zen-p.jpg" srcset="foto-jardim-zen-p.jpg 800w, foto-jardim-zen.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-zen.jpg" alt="Jardim zen com deck de madeira" loading="lazy"></button>
+      <button class="g"><img src="foto-jardim-zen-buda-p.jpg" srcset="foto-jardim-zen-buda-p.jpg 800w, foto-jardim-zen-buda.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-jardim-zen-buda.jpg" alt="Jardim zen com estátua de Buda" loading="lazy"></button>
+      <button class="g"><img src="foto-relvado-lajes-p.jpg" srcset="foto-relvado-lajes-p.jpg 800w, foto-relvado-lajes.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-relvado-lajes.jpg" alt="Relvado com caminho de lajes" loading="lazy"></button>
+      <button class="g"><img src="foto-piscina-relvado-p.jpg" srcset="foto-piscina-relvado-p.jpg 800w, foto-piscina-relvado.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-piscina-relvado.jpg" alt="Piscina com relvado" loading="lazy"></button>
+      <button class="g"><img src="foto-relvado-entrada-p.jpg" srcset="foto-relvado-entrada-p.jpg 800w, foto-relvado-entrada.jpg 1600w" sizes="(max-width: 700px) 100vw, 45vw" data-full="foto-relvado-entrada.jpg" alt="Relvado de entrada com caminho em calçada" loading="lazy"></button>
     </div>
   </div>
 </section>
-
-<!-- PROCESSO -->
 <section class="section process" id="processo">
   <div class="wrap">
     <div class="section-head light">
@@ -251,11 +122,23 @@
   </div>
 </section>
 
-<!-- CONTACTOS / FOOTER -->
+<section class="section cta-band">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>Vamos cuidar do seu jardim?</h2>
+      <p>Peça o seu orçamento grátis. Respondemos por email, sem compromisso.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="/orcamento#orcamento" class="btn btn-lg">Pedir orçamento grátis</a>
+      <a href="tel:+351917928151" class="btn btn-ghost btn-lg" data-cfg="phone">917 928 151</a>
+    </div>
+  </div>
+</section>
+
 <footer class="footer" id="contactos">
   <div class="wrap footer-grid">
     <div>
-      <a href="#topo" class="logo footer-logo"><img class="logo-img" src="logotipo.png" alt="Flores &amp; Ser · Jardins e Piscinas"></a>
+      <a href="/" class="logo footer-logo"><img class="logo-img" src="logotipo.png" alt="Flores &amp; Ser · Jardins e Piscinas"></a>
       <p>Sinta a harmonia no seu jardim.</p>
     </div>
     <div>
@@ -268,7 +151,7 @@
     </div>
     <div>
       <h4>Informação legal</h4>
-      <p><a href="politica-privacidade.html">Política de privacidade</a><br><a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener">Livro de Reclamações ↗</a></p>
+      <p><a href="/politica-privacidade">Política de privacidade</a><br><a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener">Livro de Reclamações ↗</a></p>
     </div>
   </div>
   <div class="wrap footer-legal">
@@ -288,6 +171,7 @@
   <img alt="">
   <button class="lb-next" aria-label="Seguinte">›</button>
 </div>
+
 
 <script src="config.js?v=10"></script>
 <script src="script.js?v=12"></script>
