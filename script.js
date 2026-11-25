@@ -26,6 +26,8 @@
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   // ---- Slideshow do topo ----
+  // as fotos seguintes do topo só carregam depois de a página abrir
+  window.addEventListener('load', () => { const hs = document.querySelector('.hero-slides'); if (hs) hs.classList.add('ready'); });
   const slides = document.querySelectorAll('.hero-slide');
   let s = 0;
   if (slides.length > 1) setInterval(() => { slides[s].classList.remove('active'); s = (s + 1) % slides.length; slides[s].classList.add('active'); }, 6000);
