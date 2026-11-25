@@ -439,7 +439,7 @@ body.nature{
 }
 body.nature{
   background:linear-gradient(rgba(20,46,22,.93),rgba(20,46,22,.93)),
-    url('foto-jardim-zen-buda.jpg') center/cover fixed #142e16;
+    url('foto-jardim-zen-buda-p.jpg') center/cover fixed #142e16;
 }
 .nature .eyebrow,.nature .hero .eyebrow,.nature .services-sec .eyebrow,.nature .quote .eyebrow,
 .nature .about .eyebrow,.nature #galeria .eyebrow,.nature .process .eyebrow{color:var(--gold-soft)}
@@ -531,3 +531,7 @@ body.nature{
 .logo-img.logo-r{height:68px;width:auto}
 .topbar:has(.logo-r) .topbar-inner{height:84px}
 @media (max-width:860px){.logo-img.logo-r{height:54px}.topbar:has(.logo-r) .topbar-inner{height:68px}}
+
+/* Fotos do topo: versão leve no telemóvel */
+.hero-slide{background-image:var(--bg)}
+@media (max-width:700px){.hero-slide{background-image:var(--bg-p)}}
