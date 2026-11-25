@@ -535,3 +535,4 @@ body.nature{
 /* Fotos do topo: versão leve no telemóvel */
 .hero-slide{background-image:var(--bg)}
 @media (max-width:700px){.hero-slide{background-image:var(--bg-p)}}
+.hero-slides:not(.ready) .hero-slide:not(.active){background-image:none}
